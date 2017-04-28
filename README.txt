@@ -12,7 +12,7 @@ Instructions for running tests:
 Additional steps to run webservice application:
 5. Run: mvn package
 6. Run: java -jar target/ContactMerge-0.0.1-SNAPSHOT.jar
-
+7. ApplicationConfiguration has the authorization key: YzhiZjY0ODAtMDQ1YS00YTJmLWJmZWUtNzlkNzc4ODFjZWZk
 
 Design Considerations:
 1. When merging contacts, the following things were considered:
@@ -35,7 +35,8 @@ Class Overview
 2. The classes under com.circleback.exercise.email.signature.request contain the classes used to construct the parameters that go into the EmailCapture REST request. The json contents from contact_list_to_post are converted to those classes using jackson. 
 3. The classes under com.circleback.exercise.email.signature.response contain the classes used to construct the response parameters that are returned by the EmailCapture service.
 4. EmailCaptureRestClient contains the REST client that issues the webservice request.
-5. ApplicationConfiguration contains properties for certain constants used across the application (authentication key, files to read, etc)
+5. ApplicationConfiguration contains properties for certain constants used across the application (authorization key, files to read, etc)
+	a. Authorization Key is YzhiZjY0ODAtMDQ1YS00YTJmLWJmZWUtNzlkNzc4ODFjZWZk
 6. ContactMergeService determines how to merge the contacts.
 7. The classes under com.circleback.exercise.utility contain utilities for converting to/from json and comparing data.
 8. There are some bare-bones unit tests. With additional time, more thorough tests could have been developed.
